@@ -298,40 +298,28 @@
                     </p>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 col-md-6">
                     <div class="contact-card text-center">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h5>Email Us</h5>
                         <p class="text-muted mb-3">Get in touch via email for detailed discussions</p>
-                        <a href="mailto:contact@techconsultpro.com" class="btn btn-outline-primary">
-                            contact@techconsultpro.com
+                        <a href="mailto:ysangy@gmail.com" class="btn btn-outline-primary">
+                            ysangy@gmail.com
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-5 col-md-6">
                     <div class="contact-card text-center">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
                         <h5>Call Us</h5>
                         <p class="text-muted mb-3">Speak directly with our consulting experts</p>
-                        <a href="tel:+1234567890" class="btn btn-outline-primary">
-                            +1 (234) 567-8900
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h5>Schedule Meeting</h5>
-                        <p class="text-muted mb-3">Book a consultation session at your convenience</p>
-                        <a href="#" class="btn btn-primary" onclick="alert('Booking system integration would be implemented here')">
-                            Book Consultation
+                        <a href="tel:+16468835297" class="btn btn-outline-primary">
+                            (646) 883-5297
                         </a>
                     </div>
                 </div>
@@ -344,24 +332,24 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="firstName" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="firstName" required>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="lastName" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName" required>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="company" class="form-label">Company</label>
-                                    <input type="text" class="form-control" id="company">
+                                    <input type="text" class="form-control" id="company" name="company">
                                 </div>
                                 <div class="col-12">
                                     <label for="service" class="form-label">Service Interest</label>
-                                    <select class="form-select" id="service">
-                                        <option value="">Select a service</option>
+                                    <select class="form-select" id="service" name="service">
+                                        <option value="" selected disabled>Select a service</option>
                                         <option value="cloud">Cloud Migration & Strategy</option>
                                         <option value="security">Cybersecurity Solutions</option>
                                         <option value="digital">Digital Transformation</option>
@@ -372,10 +360,10 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project requirements and goals..." required></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your project requirements and goals..." required></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                    <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Send Message</button>
                                 </div>
                             </div>
                         </form>

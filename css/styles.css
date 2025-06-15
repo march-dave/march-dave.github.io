@@ -256,11 +256,90 @@ html {
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
     transition: all 0.3s ease;
+    background-color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+    height: auto;
+    min-height: 48px;
 }
 
-.form-control:focus, .form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1);
+/* Fix textarea (Message box) styling */
+.form-control[rows] {
+    height: auto !important;
+    min-height: 120px !important;
+    resize: vertical;
+    background-color: #ffffff !important;
+    border: 2px solid #e5e7eb !important;
+    color: #212529 !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.form-control[rows]:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1) !important;
+    background-color: #ffffff !important;
+}
+
+/* Override any conflicting styles for regular inputs */
+input.form-control {
+    height: calc(1.5em + 0.75rem + 4px) !important;
+    background-color: #ffffff !important;
+    border: 2px solid #e5e7eb !important;
+    color: #212529 !important;
+}
+
+input.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1) !important;
+    background-color: #ffffff !important;
+}
+
+/* Form Select Specific Styles */
+.form-select {
+    padding-right: 2.5rem !important;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    cursor: pointer;
+}
+
+select.form-select {
+    background-color: #fff !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right .75rem center !important;
+    background-size: 16px 12px !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 0.5rem !important;
+    padding: 0.75rem 2.5rem 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #212529 !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+}
+
+select.form-select:focus {
+    border-color: var(--primary-color) !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1) !important;
+}
+
+select.form-select option {
+    color: #212529 !important;
+    background-color: #fff !important;
+}
+
+/* Ensure consistent height with other form controls */
+.form-control, 
+select.form-select {
+    height: calc(1.5em + 0.75rem + 4px) !important;
 }
 
 .form-label {

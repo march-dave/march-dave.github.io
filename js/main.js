@@ -128,21 +128,37 @@ function initContactForm() {
                 return;
             }
             
-            // Show loading state
+            // Create email content
+            const subject = `IT Consulting Inquiry from ${data.firstName} ${data.lastName}`;
+            const body = `
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Company: ${data.company || 'Not specified'}
+Service Interest: ${data.service || 'Not specified'}
+
+Message:
+${data.message}
+            `.trim();
+            
+            // Create mailto link
+            const mailtoLink = `mailto:ysangy@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Show loading state briefly
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Opening Email...';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual endpoint)
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form and button after a short delay
             setTimeout(() => {
-                showNotification('Thank you for your message! We will get back to you soon.', 'success');
+                showNotification('Email client opened! Please send the email to complete your inquiry.', 'success');
                 contactForm.reset();
-                
-                // Reset button
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 2000);
+            }, 1000);
         });
     }
 }
