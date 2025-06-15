@@ -1,10 +1,420 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional IT Consulting Services - Strategic technology solutions for your business growth">
+    <meta name="keywords" content="IT consulting, technology consulting, digital transformation, cloud solutions, cybersecurity">
+    <title>TechConsult Pro - IT Consulting Services</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code-branch me-2"></i>TechConsult Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Transform Your Business with Expert IT Consulting
+                    </h1>
+                    <p class="lead text-light mb-4">
+                        Strategic technology solutions that drive innovation, optimize operations, and accelerate your digital transformation journey.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Get Consultation</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <i class="fas fa-laptop-code hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our IT Consulting Services</h2>
+                    <p class="lead text-muted">
+                        Comprehensive technology solutions tailored to meet your business objectives and drive sustainable growth.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Migration & Strategy</h4>
+                        <p>Seamless transition to cloud infrastructure with optimized architecture, cost management, and scalability planning.</p>
+                        <ul class="service-features">
+                            <li>AWS, Azure, GCP expertise</li>
+                            <li>Migration planning & execution</li>
+                            <li>Cost optimization strategies</li>
+                            <li>Security & compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Cybersecurity Solutions</h4>
+                        <p>Comprehensive security assessments, threat protection, and compliance frameworks to safeguard your digital assets.</p>
+                        <ul class="service-features">
+                            <li>Security audits & assessments</li>
+                            <li>Threat detection & response</li>
+                            <li>Compliance management</li>
+                            <li>Employee security training</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Digital Transformation</h4>
+                        <p>End-to-end digital transformation strategies that modernize operations and enhance customer experiences.</p>
+                        <ul class="service-features">
+                            <li>Process automation</li>
+                            <li>Legacy system modernization</li>
+                            <li>Data analytics & insights</li>
+                            <li>Change management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Management & Analytics</h4>
+                        <p>Transform raw data into actionable insights with modern data architecture and advanced analytics solutions.</p>
+                        <ul class="service-features">
+                            <li>Data warehouse design</li>
+                            <li>Business intelligence</li>
+                            <li>Machine learning integration</li>
+                            <li>Real-time analytics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>Infrastructure Optimization</h4>
+                        <p>Optimize your IT infrastructure for performance, reliability, and cost-effectiveness across all environments.</p>
+                        <ul class="service-features">
+                            <li>Network architecture design</li>
+                            <li>Performance monitoring</li>
+                            <li>Disaster recovery planning</li>
+                            <li>Capacity planning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Software Development</h4>
+                        <p>Custom software solutions and application development that align with your business requirements and goals.</p>
+                        <ul class="service-features">
+                            <li>Custom application development</li>
+                            <li>API design & integration</li>
+                            <li>Mobile app development</li>
+                            <li>DevOps implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">About TechConsult Pro</h2>
+                    <p class="lead mb-4">
+                        With over a decade of experience in enterprise technology consulting, we specialize in delivering innovative IT solutions that transform businesses and drive competitive advantage.
+                    </p>
+                    <p class="mb-4">
+                        Our team of certified professionals combines deep technical expertise with strategic business acumen to help organizations navigate complex technology challenges and achieve their digital transformation goals.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="stat-item">
+                                <h3 class="fw-bold text-primary">500+</h3>
+                                <p class="mb-0">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="stat-item">
+                                <h3 class="fw-bold text-primary">200+</h3>
+                                <p class="mb-0">Satisfied Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="stat-item">
+                                <h3 class="fw-bold text-primary">15+</h3>
+                                <p class="mb-0">Years Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="stat-item">
+                                <h3 class="fw-bold text-primary">24/7</h3>
+                                <p class="mb-0">Support Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-visual">
+                        <i class="fas fa-users-cog about-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Technical Expertise</h2>
+                    <p class="lead">
+                        We stay at the forefront of technology trends to provide cutting-edge solutions for your business.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="expertise-card">
+                        <h5><i class="fab fa-aws me-2"></i>Cloud Platforms</h5>
+                        <ul class="list-unstyled">
+                            <li>Amazon Web Services (AWS)</li>
+                            <li>Microsoft Azure</li>
+                            <li>Google Cloud Platform</li>
+                            <li>IBM Cloud</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="expertise-card">
+                        <h5><i class="fas fa-code me-2"></i>Programming</h5>
+                        <ul class="list-unstyled">
+                            <li>Python, Java, C#</li>
+                            <li>JavaScript, TypeScript</li>
+                            <li>Go, Rust</li>
+                            <li>SQL, NoSQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="expertise-card">
+                        <h5><i class="fab fa-docker me-2"></i>DevOps & Tools</h5>
+                        <ul class="list-unstyled">
+                            <li>Docker, Kubernetes</li>
+                            <li>Jenkins, GitLab CI/CD</li>
+                            <li>Terraform, Ansible</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="expertise-card">
+                        <h5><i class="fas fa-brain me-2"></i>Emerging Tech</h5>
+                        <ul class="list-unstyled">
+                            <li>Artificial Intelligence</li>
+                            <li>Machine Learning</li>
+                            <li>IoT Solutions</li>
+                            <li>Blockchain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+                    <p class="lead text-muted">
+                        Ready to transform your business with expert IT consulting? Let's discuss your technology needs and create a strategic roadmap for success.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p class="text-muted mb-3">Get in touch via email for detailed discussions</p>
+                        <a href="mailto:contact@techconsultpro.com" class="btn btn-outline-primary">
+                            contact@techconsultpro.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p class="text-muted mb-3">Speak directly with our consulting experts</p>
+                        <a href="tel:+1234567890" class="btn btn-outline-primary">
+                            +1 (234) 567-8900
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>Schedule Meeting</h5>
+                        <p class="text-muted mb-3">Book a consultation session at your convenience</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Booking system integration would be implemented here')">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-card">
+                        <h4 class="mb-4">Send us a Message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="service" class="form-label">Service Interest</label>
+                                    <select class="form-select" id="service">
+                                        <option value="">Select a service</option>
+                                        <option value="cloud">Cloud Migration & Strategy</option>
+                                        <option value="security">Cybersecurity Solutions</option>
+                                        <option value="digital">Digital Transformation</option>
+                                        <option value="data">Data Management & Analytics</option>
+                                        <option value="infrastructure">Infrastructure Optimization</option>
+                                        <option value="development">Software Development</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project requirements and goals..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-code-branch me-2"></i>
+                        <span class="fw-bold">TechConsult Pro</span>
+                    </div>
+                    <p class="mb-0 mt-2 text-muted">
+                        Transforming businesses through expert IT consulting since 2010.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links mb-2">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p class="mb-0 text-muted small">
+                        © 2025 TechConsult Pro. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
