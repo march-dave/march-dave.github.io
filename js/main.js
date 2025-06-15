@@ -5,8 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initScrollAnimations();
     initNavbarScroll();
-    initContactForm();
+    initContactForm(); // This function might need adjustments or removal depending on Formspree's default behavior
     initTypewriter();
+
+    // Initialize Choices.js for the service select element
+    const serviceSelect = document.getElementById('service');
+    if (serviceSelect) {
+        new Choices(serviceSelect, {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
+    }
 });
 
 // Smooth scrolling for navigation links
@@ -111,123 +120,41 @@ function initNavbarScroll() {
     });
 }
 
-// Contact form handling
+// Contact form submission (This function may no longer be needed or may need to be simplified for Formspree)
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
-    
+    const submitBtn = document.getElementById('submitBtn');
+
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (!validateForm(data)) {
+            // Basic validation example (can be expanded)
+            let isValid = true;
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    // Optionally, add some visual feedback for empty required fields
+                    field.classList.add('is-invalid'); 
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault(); // Prevent submission if validation fails
+                alert('Please fill out all required fields.');
                 return;
             }
             
-            // Create email content
-            const subject = `IT Consulting Inquiry from ${data.firstName} ${data.lastName}`;
-            const body = `
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Company: ${data.company || 'Not specified'}
-Service Interest: ${data.service || 'Not specified'}
-
-Message:
-${data.message}
-            `.trim();
-            
-            // Create mailto link
-            const mailtoLink = `mailto:ysangy@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Show loading state briefly
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Opening Email...';
+            // Optional: Disable button on submit to prevent multiple submissions
+            // Formspree handles the actual submission and redirection/success message.
             submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
             
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Reset form and button after a short delay
-            setTimeout(() => {
-                showNotification('Email client opened! Please send the email to complete your inquiry.', 'success');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
+            // Formspree will handle the rest. 
+            // You might want to clear the button state if the user navigates back or if there's an error before Formspree handles it.
         });
     }
-}
-
-// Form validation
-function validateForm(data) {
-    const errors = [];
-    
-    if (!data.firstName || data.firstName.trim().length < 2) {
-        errors.push('First name must be at least 2 characters long');
-    }
-    
-    if (!data.lastName || data.lastName.trim().length < 2) {
-        errors.push('Last name must be at least 2 characters long');
-    }
-    
-    if (!data.email || !isValidEmail(data.email)) {
-        errors.push('Please enter a valid email address');
-    }
-    
-    if (!data.message || data.message.trim().length < 10) {
-        errors.push('Message must be at least 10 characters long');
-    }
-    
-    if (errors.length > 0) {
-        showNotification(errors.join('<br>'), 'error');
-        return false;
-    }
-    
-    return true;
-}
-
-// Email validation
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Notification system
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotifications = document.querySelectorAll('.notification');
-    existingNotifications.forEach(notification => notification.remove());
-    
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification alert alert-${type === 'error' ? 'danger' : type === 'success' ? 'success' : 'info'} alert-dismissible fade show`;
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 9999;
-        max-width: 400px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    `;
-    
-    notification.innerHTML = `
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentNode) {
-            notification.remove();
-        }
-    }, 5000);
 }
 
 // Typewriter effect for hero section
@@ -257,6 +184,14 @@ function initTypewriter() {
         setTimeout(typeNextWord, 1000);
     }
 }
+
+// Initialize Bootstrap Dropdowns
+/* function initBootstrapDropdowns() {
+    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl)
+    })
+} */
 
 // Utility functions
 function debounce(func, wait) {

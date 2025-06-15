@@ -323,6 +323,7 @@ select.form-select {
     -moz-appearance: none !important;
     appearance: none !important;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+    position: relative; /* Added */
 }
 
 select.form-select:focus {
@@ -337,7 +338,7 @@ select.form-select option {
 }
 
 /* Ensure consistent height with other form controls */
-.form-control, 
+.form-control,
 select.form-select {
     height: calc(1.5em + 0.75rem + 4px) !important;
 }
