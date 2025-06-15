@@ -303,15 +303,15 @@
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-5 col-md-6">
-                    <div class="contact-card text-center">
+                    <div class="contact-card text-center clickable-card" onclick="scrollToContactForm()">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h5>Email Us</h5>
                         <p class="text-muted mb-3">Get in touch via email for detailed discussions</p>
-                        <a href="mailto:ysangy@gmail.com" class="btn btn-outline-primary">
-                            ysangy@gmail.com
-                        </a>
+                        <div class="btn btn-outline-primary">
+                            Send Message
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
@@ -329,9 +329,9 @@
             </div>
             <div class="row mt-5">
                 <div class="col-lg-8 mx-auto">
-                    <div class="contact-form-card">
+                    <div class="contact-form-card" id="contactForm">
                         <h4 class="mb-4">Send us a Message</h4>
-                        <form id="contactForm" action="https://formspree.io/f/mjkrrewo" method="POST">
+                        <form id="contactFormSubmit" action="https://formspree.io/f/mjkrrewo" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="firstName" class="form-label">First Name</label>

@@ -289,3 +289,27 @@ document.head.appendChild(rippleStyle);
 // Console welcome message
 console.log('%c🚀 TechConsult Pro Website Loaded Successfully!', 'color: #2563eb; font-size: 16px; font-weight: bold;');
 console.log('%cBuilt with modern web technologies for optimal performance', 'color: #6b7280; font-size: 12px;');
+
+// Function to scroll to contact form when email card is clicked
+function scrollToContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = contactForm.offsetTop - navHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+        
+        // Optional: Add a subtle focus effect to the form
+        setTimeout(() => {
+            contactForm.style.transform = 'scale(1.02)';
+            contactForm.style.transition = 'transform 0.3s ease';
+            
+            setTimeout(() => {
+                contactForm.style.transform = 'scale(1)';
+            }, 300);
+        }, 500);
+    }
+}

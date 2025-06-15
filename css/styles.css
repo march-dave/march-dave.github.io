@@ -227,6 +227,20 @@ html {
     box-shadow: var(--shadow-medium);
 }
 
+.clickable-card {
+    cursor: pointer;
+    user-select: none;
+}
+
+.clickable-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-large);
+}
+
+.clickable-card:active {
+    transform: translateY(-2px);
+}
+
 .contact-icon {
     width: 80px;
     height: 80px;
