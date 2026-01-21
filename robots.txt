@@ -1,2 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://march-dave.github.io/sitemap.xml
+
 User-agent: Google-adstxt
 Disallow:
